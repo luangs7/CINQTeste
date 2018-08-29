@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1f272f</color>
+    <color name="colorPrimaryWithOpacity">#801f272f</color>
+    <color name="colorPrimaryDark">#80000000</color>
+    <color name="colorAccent">#9b9b9b</color>
+    <color name="colorToolbar">#1f272f</color>
+    <color name="colorBackTransparency">#dd1f272f</color>
+    <color name="myblack">#000000</color>
+    <color name="blackAlpha">#0a000000</color>
+    <color name="tabSelected">#80cd325c</color>
+    <color name="buttonLogin">#1f272f</color>
+    <color name="buttonLoginPressed">#801f272f</color>
+    <color name="btnCadastro">#1f272f</color>
+    <color name="btnCadastroPressed">#801f272f</color>
+    <color name="buttonFb">#3a559f</color>
+    <color name="buttonFbPressed">#803a559f</color>
+    <color name="titlecolor">#313131</color>
+    <color name="drawer">#343434</color>
+    <color name="gray">#a8a8a8</color>
+    <color name="antiflash_white">#F3F2F4</color>
+    <color name="chateaugreen">#37B24F</color>
+    <color name="check">#8db22f</color>
+    <color name="backgroundCarAlert">#f4e5ed</color>
+    <color name="demo_light_transparent">#16000000</color>
+    <color name="default_shimmer_color">#e3e1e3</color>
+</resources>

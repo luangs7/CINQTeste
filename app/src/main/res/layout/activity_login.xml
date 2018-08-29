@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Login"
+                        android:textColor="#1f272f"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <EditText
+                        android:id="@+id/login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#989898"
+                        android:drawablePadding="15sp"
+                        android:fontFamily="sans-serif"
+                        android:hint="Insira seu email"
+                        android:textColor="#de000000"
+                        android:inputType="textEmailAddress"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Senha"
+                        android:textColor="#1f272f"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+
+                        />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#989898"
+                        android:drawablePadding="15sp"
+                        android:fontFamily="sans-serif"
+                        android:hint="Insira a senha"
+                        android:inputType="textPassword"
+                        android:textColor="#de000000"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginTop="16sp"
+                    android:background="@drawable/button_rounded"
+                    android:text="Entrar"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginTop="30sp"
+                    android:id="@+id/signup"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="7sp"
+                    android:text="@string/signup"
+                    android:textColor="#8a000000"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
