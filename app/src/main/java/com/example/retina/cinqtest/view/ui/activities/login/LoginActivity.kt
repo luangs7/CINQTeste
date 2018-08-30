@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.EditText
 import br.com.luan2.lgutilsk.utils.*
 import com.example.retina.cinqtest.R
+import com.example.retina.cinqtest.R.id.*
 import com.example.retina.cinqtest.data.db.database
 import com.example.retina.cinqtest.data.model.User
 import com.example.retina.cinqtest.view.ui.activities.BaseActivity
@@ -77,36 +78,7 @@ class LoginActivity : BaseActivity(), LoginActivityContract.View {
 
     override fun checkFields() {
         verifyAndReturn()?.let {
-            val checkUser = database.use {
-                val mail = it.email
-                select(User.TABLE_NAME)
-                        .whereArgs(User.COLUMN_EMAIL + "={email}", "email" to mail as Any)
-                        .exec {
-                            parseOpt(object : MapRowParser<User> {
-                                override fun parseRow(columns: Map<String, Any?>): User {
-                                    val name = columns.getValue(User.COLUMN_NAME).toString()
-                                    val id = columns.getValue(User.COLUMN_ID).toString().toInt()
-                                    val email = columns.getValue(User.COLUMN_EMAIL).toString()
-                                    val password = columns.getValue(User.COLUMN_PASS).toString()
-
-                                    if (password.equals(it.password)) {
-                                        presenter.onSuccess(User(name, email, password, id))
-
-                                    } else {
-                                        presenter.onError("Senha não confere!")
-                                    }
-
-                                    return User(name, email, password, id)
-
-                                }
-                            })
-                        }
-            }
-
-
-            if (checkUser == null) {
-                presenter.onError("Dados incorretos!")
-            }
+            presenter.selectFromDb(it)
         }
     }
 

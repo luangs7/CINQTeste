@@ -9,6 +9,7 @@ interface LoginActivityContract {
         fun onError(error:String)
         fun onSuccess(user: User)
          fun onSignupClick()
+         fun selectFromDb(user: User)
     }
 
 
