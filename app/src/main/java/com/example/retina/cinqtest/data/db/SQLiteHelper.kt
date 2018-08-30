@@ -9,7 +9,7 @@ import org.jetbrains.anko.db.ManagedSQLiteOpenHelper
 import org.jetbrains.anko.db.PRIMARY_KEY
 import org.jetbrains.anko.db.*
 
-class SQLiteHelper (ctx: Context) : ManagedSQLiteOpenHelper(ctx, "LibraryDatabase", null, 1) {
+class SQLiteHelper (ctx: Context) : ManagedSQLiteOpenHelper(ctx, "LibraryDatabase", null, 3) {
     companion object {
         private var instance: SQLiteHelper? = null
 
@@ -28,6 +28,7 @@ class SQLiteHelper (ctx: Context) : ManagedSQLiteOpenHelper(ctx, "LibraryDatabas
 
     override fun onUpgrade(database: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         database.dropTable(User.TABLE_NAME, true)
+        onCreate(database)
     }
 }
 

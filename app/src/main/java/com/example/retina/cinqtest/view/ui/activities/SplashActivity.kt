@@ -14,6 +14,7 @@ import br.com.luan2.lgutilsk.utils.showDebugDBAddressLogToast
 import br.com.luan2.lgutilsk.utils.splashOpen
 import br.com.luan2.lgutilsk.utils.startActivityClearTask
 import com.example.retina.cinqtest.R
+import com.example.retina.cinqtest.data.db.database
 import com.example.retina.cinqtest.data.model.User
 import com.example.retina.cinqtest.extras.BottomMessage
 import com.example.retina.cinqtest.view.ui.activities.login.LoginActivity
@@ -31,6 +32,7 @@ class SplashActivity : BaseActivity() {
         showDebugDBAddressLogToast()
 
         session.user = User.get(this)
+
 
         splashOpen {
             startActivityClearTask(LoginActivity())

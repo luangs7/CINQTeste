@@ -24,7 +24,7 @@ class SignupActivityPresenter : SignupActivityContract.Presenter {
 
     override fun onSuccess(user: User) {
         context.database.use {
-            insert(User.TABLE_NAME, User.COLUMN_ID to (0 until 100).random(), User.COLUMN_NAME to user.name, User.COLUMN_EMAIL to user.email, User.COLUMN_PASS to user.password)
+            insert(User.TABLE_NAME, User.COLUMN_ID to (0 until 100).random().toString(), User.COLUMN_NAME to user.name, User.COLUMN_EMAIL to user.email, User.COLUMN_PASS to user.password)
         }
 
         Session.shared.user = user

@@ -1,13 +1,11 @@
 package com.example.retina.cinqtest.view.ui.activities.signup
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
 import br.com.luan2.lgutilsk.utils.*
 import com.example.retina.cinqtest.R
 import com.example.retina.cinqtest.data.model.User
 import com.example.retina.cinqtest.view.ui.activities.BaseActivity
-import com.example.retina.cinqtest.view.ui.activities.MainActivity
+import com.example.retina.cinqtest.view.ui.activities.home.MainActivity
 import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignupActivity : BaseActivity(), SignupActivityContract.View {

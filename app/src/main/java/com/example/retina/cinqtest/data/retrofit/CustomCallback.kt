@@ -20,7 +20,7 @@ import com.example.retina.cinqtest.data.model.User
 import com.example.retina.cinqtest.extras.BottomMessage
 import com.example.retina.cinqtest.extras.createSnackProgress
 import com.example.retina.cinqtest.extras.dismissSnackProgress
-import com.example.retina.cinqtest.view.ui.activities.MainActivity
+import com.example.retina.cinqtest.view.ui.activities.home.MainActivity
 import com.google.gson.Gson
 import org.jetbrains.anko.find
 import retrofit2.Call
